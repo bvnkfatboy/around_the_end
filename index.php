@@ -25,7 +25,6 @@
 </head>
 
 
-
 <body class="mx-auto">
     <?php 
     $current_page = isset($_GET['page']) ? $_GET['page'] : 'home' ;
