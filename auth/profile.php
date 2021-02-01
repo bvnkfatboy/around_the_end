@@ -1,8 +1,59 @@
 <?php include_once('include/navbar.php')?>
 <?php if(isset($_SESSION['auth-id'])){?>
+<style>
+    .user-info {
+        font-family: 'Helvetica', sans-serif;
+        
+    }
+    .title-menu{
+        font-family: 'Courier New', monospace;
+        margin-top: 25px;
+    }
 
-<h3>Account Details</h3>
-<p><?php echo($_SESSION['auth-name']);?></p>
+    .user-info p{
+        margin-left: 20px;
+    }
+
+    .btn {        
+        max-width: 150px;
+        border-radius: 2px;
+        font-size: 15px;
+        font-weight: bold;
+        background-color: black;
+        border: 1px black;
+    }
+
+    .btn:hover{
+        background-color: whitesmoke;
+        color: black;
+
+    }
+</style>
+
+
+<div class="container-fluid">
+    <div class="user-info">
+        <div class="row">
+            <div class="col-md-6">
+            <div class="user-name">
+                <h4 class="title-menu">ACCOUNT DETAILS</h4>
+                
+                <p><?php echo($_SESSION['auth-name']);?></p>
+            </div>
+            <div class="user-addre">
+                <h4 class="title-menu">ADRESS DETAILS</h4>
+                <p><?php echo($_SESSION['auth-address']);?></p>
+
+            </div>
+            <a href="#" class="btn btn-primary btn-block">EDIT PROFILE</a>
+            <a href="#" class="btn btn-primary btn-block">LOGOUT</a>
+            </div>
+            <div class="col-md-6">
+            
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php }?>
 

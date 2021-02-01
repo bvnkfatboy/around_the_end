@@ -3,7 +3,7 @@
     width: 450px;
     margin: 50px auto;
   	font-size: 15px;
-      font-family: 'Helvetica', sans-serif;
+    font-family: 'Helvetica', sans-serif;
 }
 
 .login-form a{
