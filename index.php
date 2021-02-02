@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/font.css">
     <link rel="stylesheet" href="dist/css/fontawesome.css">
+    <link rel="stylesheet" href="dist/css/sweetalert2.min.css">
     <link href="dist/img/logo_white.jpg" rel="icon" type="image/jpg" />
     <script src="dist/js/jquery-3.5.1.slim.min.js"></script>
     <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/sweetalert2.all.min.js"></script>
 
     <style>
         body{
