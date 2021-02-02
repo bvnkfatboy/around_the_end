@@ -42,10 +42,31 @@
 }
 </style>
 
+<?php
+    include('config.inc.php');
+    if ( isset($_POST['auth-reg']) ){
+        $acc_name = $_POST['auth-name'];
+        $acc_email = $_POST['auth-email'];
+        $acc_pass  = $_POST['auth-pass'];
+    
+        $sql="SELECT * FROM account Where acc_email='".$acc_email."' ";
+        $result = mysqli_query($conn,$sql);
+        $row = mysqli_fetch_array($result);
+        if(!$row){
+            $query = "INSERT INTO account (acc_name,acc_email,acc_password,acc_address,acc_phone,acc_status) 
+            VALUES ('$acc_name','$acc_email','$acc_pass','no detail','no detail','member')";
+            mysqli_query($conn, $query);
+            echo "<script>location.href='?page=home'</script>";
+        }else { ?>
+        
+        <?php }
+    }
+?>
+
 <?php include_once('include/navbar.php')?>
 
 <div class="login-form">
-    <form action="?page=auth&&check=register" method="post">  
+    <form action="" method="post">  
         <div class="form-group">
             <input type="text" class="form-control" placeholder="Name" id="auth-name" name="auth-name" required="required">
         </div>
@@ -56,7 +77,7 @@
             <input type="password" class="form-control" placeholder="Password" id="auth-pass" name="auth-pass" required="required">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">CREATE</button>
+            <button type="submit" name="auth-reg" class="btn btn-primary btn-block">CREATE</button>
         </div>
     
     </form>
