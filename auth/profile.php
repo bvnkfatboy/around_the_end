@@ -46,7 +46,7 @@
 
             </div>
             <a href="#" class="btn btn-primary btn-block">EDIT PROFILE</a>
-            <a href="#" class="btn btn-primary btn-block">LOGOUT</a>
+            <a href="#" onclick="conf()" class="btn btn-primary btn-block">LOGOUT</a>
             </div>
             <div class="col-md-6">
             
@@ -55,6 +55,23 @@
     </div>
 </div>
 
+<script>
+    function conf(){
+        Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            location.href = '?page=logout';         
+        }
+        })
+    }
+</script>
 <?php }?>
 
 <?php include_once('include/footer.php')?>
