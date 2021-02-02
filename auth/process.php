@@ -1,7 +1,7 @@
 <?php
 include('config.inc.php');
+session_start();
 if($_GET['check'] == 'login'){
-    session_start();
     $acc_email = $_POST['auth-email'];
     $acc_pass  = $_POST['auth-pass'];
     
@@ -25,7 +25,6 @@ if($_GET['check'] == 'login'){
         echo "</script>";
     }
 }elseif($_GET['check'] == 'register'){
-    session_start();
     $acc_name = $_POST['auth-name'];
     $acc_email = $_POST['auth-email'];
     $acc_pass  = $_POST['auth-pass'];
@@ -37,23 +36,14 @@ if($_GET['check'] == 'login'){
     if(!$row){
         $query = "INSERT INTO account (acc_name,acc_email,acc_password,acc_address,acc_phone,acc_status) 
         VALUES ('$acc_name','$acc_email','$acc_pass','no detail','no detail','member')";
-        $suc = mysqli_query($conn, $query);
+        mysqli_query($conn, $query);
+        echo "<script>location.href='?page=home'</script>";
     }else{
-        echo "<script>";
-        echo "alert(\" User information Has been used, please change \");"; 
-        echo "window.history.back()";
-        echo "</script>";
-    }
-    if($suc){
-        echo "<script>";
-        echo "alert(\" Successfully registered \");"; 
-        echo "window.open('?page=home')";
-        echo "</script>";
-    }else{
-        echo "<script>";
-        echo "alert(\" Failed to register \");"; 
-        echo "window.history.back()";
-        echo "</script>";
+    ?>
+        <script>
+        
+        </script>
+    <?php
     }
 }
 ?>
