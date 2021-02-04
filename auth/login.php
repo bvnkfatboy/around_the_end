@@ -34,7 +34,9 @@
     background-color: black;
     border: 1px black;
 }
-
+label {
+        font-family: 'Courier New', monospace;
+    }
 .btn:hover{
     background-color: whitesmoke;
     color: black;
@@ -42,18 +44,57 @@
 }
 </style>
 
+
+
+<?php
+include('config.inc.php');
+if (isset($_POST['auth-log'])) {
+    $acc_email = $_POST['auth-email'];
+    $acc_pass  = $_POST['auth-pass'];
+    
+    $sql="SELECT * FROM account Where acc_email='".$acc_email."' and acc_password='".$acc_pass."' ";
+    $result = mysqli_query($conn,$sql);
+    
+    if(mysqli_num_rows($result)==1){
+        session_start();
+        $row = mysqli_fetch_array($result);
+        $_SESSION['auth-id'] = $row['acc_id'];
+        $_SESSION['auth-status'] = $row['acc_status'];
+        
+        header('Location: ?page=home');
+    } else { ?>
+        <script>
+            Swal.fire({
+                title: 'ข้อมูลของคุณไม่ถูกต้อง',
+                text:'เนื่องจากมีข้อมูลไม่ถูก, โปรดลองอีกครั้ง',
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonText: `ตกลง`,
+            }).then((result) => {
+
+                if (result.isConfirmed) {
+                    window.history.back();
+                }
+            })
+        </script>
+<?php }
+}
+
+?>
 <?php include_once('include/navbar.php')?>
 
 <div class="login-form">
-    <form action="?page=auth&&check=login" method="post">  
+    <form action="" method="post">  
         <div class="form-group">
+        <label for="auth-email">EMAIL</label>
             <input type="email" class="form-control" placeholder="Email" id="auth-email" name="auth-email" required="required">
         </div>
         <div class="form-group">
+        <label for="auth-pass">PASSWORD</label>
             <input type="password" class="form-control" placeholder="Password" id="auth-pass" name="auth-pass" required="required">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block">SIGN IN</button>
+            <button type="submit" name="auth-log" class="btn btn-primary btn-block">SIGN IN</button>
         </div>
     
     </form>

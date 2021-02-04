@@ -56,12 +56,6 @@
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
-        case ('auth'):
-            include_once 'auth/process.php';
-            $title = "Process - A.T.E";
-            $output = str_replace('%TITLE%', $title, $output);
-            echo $output;
-            break;
         case ('logout'):
             include_once 'auth/logout.php';
             $title = "Logout - A.T.E";
@@ -70,6 +64,12 @@
             break;
         case ('profile'):
             include_once 'auth/profile.php';
+            $title = "Profile - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('edit_profile'):
+            include_once 'auth/editprofile.php';
             $title = "Profile - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;

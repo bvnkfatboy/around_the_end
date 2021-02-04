@@ -107,48 +107,7 @@ display: block;
         <div class="product_name"><p class="product_text">Some text</p></div>
     </div>
   </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
+
 
 </div>
 
