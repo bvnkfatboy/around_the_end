@@ -47,7 +47,7 @@ display: block;
 }
 
 .product_cards p {
-    font-family: 'Courier New', monospace;
+    
     font-size: 14px;
     display: none;
 }

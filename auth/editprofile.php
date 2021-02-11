@@ -7,7 +7,7 @@
         width: 450px;
         margin: 50px auto;
         font-size: 15px;
-        font-family: 'Helvetica', sans-serif;
+        
     }
 
     .login-form a {
@@ -37,7 +37,7 @@
         border-radius: 2px;
     }
     label {
-        font-family: 'Courier New', monospace;
+        
     }
     .btn {
         font-size: 15px;

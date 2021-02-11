@@ -1,7 +1,7 @@
 <?php include_once('include/navbar.php') ?>
 
 
-<div class="row justify-content-md-center mx-auto">
+<!-- <div class="row justify-content-md-center mx-auto">
     <div class="col-sm-6 mx-auto">
         <div id="infomationslide" class="carousel slide" style="max-width: 1000px;" data-ride="carousel" interval="2000" pause="hover">
             <div class="carousel-inner">
@@ -36,7 +36,7 @@
         </div>
     </div>
 </div>
-<br>
+<br> -->
 
 <style>
 
@@ -87,7 +87,7 @@ display: block;
 }
 
 .product_cards p {
-    font-family: 'Courier New', monospace;
+    
     font-size: 14px;
     display: none;
     word-wrap: break-word;
@@ -98,7 +98,7 @@ display: block;
 }
 </style>
 
-<h4 class="text-center" style="font-family: 'Courier New', monospace;">RECOMMAND PRODUCT</h4>
+
 <div class="row">
 
   <div class="column">

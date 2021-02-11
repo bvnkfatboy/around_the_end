@@ -3,7 +3,7 @@
     width: 450px;
     margin: 50px auto;
   	font-size: 15px;
-    font-family: 'Helvetica', sans-serif;
+    
 }
 
 .login-form a{
@@ -35,7 +35,7 @@
     border: 1px black;
 }
 label {
-        font-family: 'Courier New', monospace;
+        
     }
 .btn:hover{
     background-color: whitesmoke;

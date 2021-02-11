@@ -2,11 +2,11 @@
 <?php if(isset($_SESSION['auth-id'])){?>
 <style>
     .user-info {
-        font-family: 'Helvetica', sans-serif;
+        
         
     }
     .title-menu{
-        font-family: 'Courier New', monospace;
+        
         margin-top: 25px;
     }
 

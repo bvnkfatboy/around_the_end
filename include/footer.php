@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class=" text-center text-lg-start" style="font-family: 'Courier New', monospace;">
+<footer class=" text-center text-lg-start" style="">
   <!-- Grid container -->
   <br>
   <br>

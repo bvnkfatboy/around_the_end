@@ -35,6 +35,9 @@ nav{
 
     <ul class="navbar-nav mr-auto">
         <li class="nav-item mx-auto">
+            <a class="nav-link" href="#">HOLYDAY 2020</a>
+        </li>
+        <li class="nav-item mx-auto">
             <a class="nav-link" href="#">OUTERWEAR</a>
         </li>
         <li class="nav-item mx-auto">
