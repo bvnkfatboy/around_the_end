@@ -38,6 +38,12 @@
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
+        case ('allproduct'):
+            include_once 'homepage.php';
+            $title = "All Products- A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
         case ('test'):
             include_once 'test.php';
             $title = "test";
