@@ -73,7 +73,7 @@ if (isset($_POST['auth-log'])) {
             }).then((result) => {
 
                 if (result.isConfirmed) {
-                    window.history.back();
+                    header('location: ?page:login');
                 }
             })
         </script>

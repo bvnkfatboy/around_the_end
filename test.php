@@ -1,6 +1,4 @@
-<!-- <style>
-
-
+<style>
 
 .column {
   float: left;
@@ -8,7 +6,7 @@
   padding: 0 15px;
 }
 
-.row {margin: 0 -5px;}
+.row {margin: 0;}
 
 
 .row:after {
@@ -42,19 +40,24 @@
 
 }
 
-.product_cards:hover p {
-display: block;
-}
-
 .product_cards p {
     
     font-size: 14px;
-    display: none;
+    word-wrap: break-word;
+}
+
+
+.product_cards img {
+  display:block;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .product_name{
     height: 25px;
     width: 100%;
 }
+
 </style>
 
 
@@ -62,52 +65,9 @@ display: block;
 
   <div class="column">
     <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
-        <div class="product_name"><p class="product_text">Some text</p></div>
-    </div>
-  </div>
-  <div class="column">
-    <div class="product_cards">
-        <img class="d-block w-100 mx-auto" width="336px" src="dist/img/product/1.jpg">
+        <img  width="336px" src="dist/img/product/1.jpg">
         <div class="product_name"><p class="product_text">Some text</p></div>
     </div>
   </div>
 
-</div> -->
-
+</div>

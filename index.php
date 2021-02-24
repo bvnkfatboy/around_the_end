@@ -80,6 +80,12 @@
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
+        case ('admin'):
+            include_once 'admin/admin_page.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
         default:
             include_once 'error404.php';
             $title = "ERROR PAGE - A.T.E";

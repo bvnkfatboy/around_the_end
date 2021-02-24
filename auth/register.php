@@ -64,7 +64,7 @@ if (isset($_POST['auth-reg'])) {
         $query = "INSERT INTO account (acc_name,acc_email,acc_password,acc_address,acc_phone,acc_status) 
             VALUES ('$acc_name','$acc_email','$acc_pass','no detail','no detail','member')";
         mysqli_query($conn, $query);
-        echo "<script>location.href='?page=home'</script>";
+        header('location: ?page=login');
     } else { ?>
         <script>
             Swal.fire({
@@ -76,7 +76,7 @@ if (isset($_POST['auth-reg'])) {
             }).then((result) => {
 
                 if (result.isConfirmed) {
-                    window.history.back();
+                    header('location: ?page=register');
                 }
             })
         </script>

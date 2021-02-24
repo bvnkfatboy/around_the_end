@@ -74,6 +74,17 @@ nav{
         <li class="nav-item mx-auto">
             <a class="nav-link" href="#">CART (0)</a>
         </li>
+        <?php
+        $check_admin = isset($_SESSION['auth-status']);
+        if($check_admin == 'admin'){
+        echo' 
+            <li class="nav-item mx-auto">
+                <a class="nav-link" href="?page=admin">หลังร้าน</a>
+            </li> 
+            ';
+        }
+        ?>
+
     </ul>
 
   </div>
