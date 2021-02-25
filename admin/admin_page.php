@@ -2,7 +2,7 @@
 
 include_once('include/navbar.php');
 
-$check_admin = isset($_SESSION['auth-status']);
+$check_admin = isset($_SESSION['auth-status']) ? $_SESSION['auth-status'] : ''; 
 
 if($check_admin == 'admin' ){
 ?>
@@ -85,7 +85,7 @@ a:hover{
     
 
     <div class="column">
-        <a href="">    
+        <a href="?page=admin_member">    
             <div class="product_cards">
                 <i class="fas  fa-users mb-1 fa-5x mx-auto w-100 d-block"></i>
                 <div class="product_name "><p class="product_text">สมาชิก</p></div>
@@ -94,7 +94,7 @@ a:hover{
     </div>
 
     <div class="column">
-        <a href="">    
+        <a href="?page=admin_product">    
             <div class="product_cards">
                 <i class="fas  fa-tshirt mb-1 fa-5x mx-auto w-100 d-block"></i>
                 <div class="product_name "><p class="product_text">สินค้า</p></div>
@@ -103,7 +103,7 @@ a:hover{
     </div>
 
     <div class="column">
-        <a href="">    
+        <a href="?page=admin_approve">    
             <div class="product_cards">
                 <i class="fas  fa-wallet mb-1 fa-5x mx-auto w-100 d-block"></i>
                 <div class="product_name "><p class="product_text">ยืนยันชำระเงิน</p></div>
@@ -112,7 +112,7 @@ a:hover{
     </div>
 
     <div class="column">
-        <a href="">    
+        <a href="?page=admin_tracking">    
             <div class="product_cards">
                 <i class="fas  fa-shipping-fast mb-1 fa-5x mx-auto w-100 d-block"></i>
                 <div class="product_name "><p class="product_text">แจ้งเลขพัสดุ</p></div>
@@ -121,7 +121,7 @@ a:hover{
     </div>
 
     <div class="column">
-        <a href="">    
+        <a href="?page=admin_data">    
             <div class="product_cards">
                 <i class="fas  fa-chart-pie mb-1 fa-5x mx-auto w-100 d-block"></i>
                 <div class="product_name "><p class="product_text">ข้อมูลโดยรวม</p></div>

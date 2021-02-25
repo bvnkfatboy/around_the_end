@@ -20,7 +20,7 @@
     <style>
         body{
             width: 100%;
-            max-width: 1700px;
+            max-width: 1324px;
                 
         }
     </style>
@@ -50,6 +50,7 @@
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
+        // auth process 
         case ('login'):
             include_once 'auth/login.php';
             $title = "Login - A.T.E";
@@ -80,12 +81,59 @@
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
+
+        // admin page
         case ('admin'):
             include_once 'admin/admin_page.php';
             $title = "หลังร้าน - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
+        case ('admin_member'):
+            include_once 'admin/admin_member.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('admin_product'):
+            include_once 'admin/admin_product.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('admin_approve'):
+            include_once 'admin/admin_approve.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('admin_tracking'):
+            include_once 'admin/admin_tracking.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('admin_data'):
+            include_once 'admin/admin_data.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
+        // admin member
+        case ('member_edit'):
+            include_once 'admin/member/member_edit.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('member_remove'):
+            include_once 'admin/member/member_remove.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
         default:
             include_once 'error404.php';
             $title = "ERROR PAGE - A.T.E";
