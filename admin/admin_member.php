@@ -10,12 +10,15 @@ if($check_admin == 'admin' ){
 
 <style>
     .btn-back {        
-        max-width: 150px;
+      max-width: 150px;
         border-radius: 2px;
         font-size: 15px;
         font-weight: bold;
         background-color: black;
         border: 1px black;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
     }
 
     .btn-back:hover{

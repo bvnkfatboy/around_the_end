@@ -17,6 +17,9 @@ if($check_admin == 'admin' ){
         font-weight: bold;
         background-color: black;
         border: 1px black;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top:30px;
     }
 
     .btn-back:hover{
