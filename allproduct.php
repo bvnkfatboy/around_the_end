@@ -7,6 +7,7 @@
   float: left;
   width: 20%;
   padding: 0 15px;
+
 }
 
 .row {margin: 0;}

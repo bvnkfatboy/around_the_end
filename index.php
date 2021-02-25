@@ -21,7 +21,7 @@
         body{
             width: 100%;
             max-width: 1700px;
-            
+                
         }
     </style>
 </head>
