@@ -30,6 +30,15 @@ if($check_admin == 'admin' ){
 </style>
 <a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
 
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">aasd
+		</div>
+		<div class="col-md-10">ddssa
+		</div>
+	</div>
+</div>
+
 <?php }else {
     header('Location: ?page=home');
 }?>
