@@ -62,9 +62,9 @@ $check_admin = isset($_SESSION['auth-status']) ? $_SESSION['auth-status'] : '';
         font-weight: bold;
         background-color: black;
         border: 1px black;
-        margin-left:auto;
-        margin-right:auto;
         margin-top:30px;
+        margin-right:auto;
+        margin-left:30px;
     }
 
     .btn-back:hover{

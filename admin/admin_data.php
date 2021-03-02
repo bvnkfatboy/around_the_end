@@ -17,9 +17,9 @@ if($check_admin == 'admin' ){
         font-weight: bold;
         background-color: black;
         border: 1px black;
-        margin-left:auto;
-        margin-right:auto;
         margin-top:30px;
+        margin-right:auto;
+        margin-left:30px;
     }
 
     .btn-back:hover{
@@ -29,6 +29,7 @@ if($check_admin == 'admin' ){
     }
 </style>
 <a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
+<hr>
 <?php }else {
     header('Location: ?page=home');
 }?>

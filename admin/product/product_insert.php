@@ -46,15 +46,20 @@ if($check_admin == 'admin' ){
 
     }
 
+    .uploadpro{
+    }
+
 </style>
-<a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
-<hr>
-<a href="?page=product_insert" class="btn btn-primary btn-block btn-proinsert">เพิ่มสินค้า</a><br>
+<a href="?page=admin_product" class="btn btn-primary btn-block btn-back">กลับหน้าจัดการสินค้า</a><br>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2">aasd
+		<div class="col-md-7">
+            <div class="uploadpro">
+
+            </div>
 		</div>
-		<div class="col-md-10">ddssa
+		<div class="col-md-5">
+
 		</div>
 	</div>
 </div>

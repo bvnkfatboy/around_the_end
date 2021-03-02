@@ -11,22 +11,25 @@ nav .navbar-nav li a:hover{
   background-color: black;
 }
 
-nav{
-    /*  */
-    
+.navbarei{
+    min-height: 30;
+  padding-top: 4.5rem;
 }
-
+.navbarc-white {
+        background:white;
+}
 </style>
 
+<div class="navbarei">
 
+
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top navbarc-white">
 <nav class="navbar navbar-light">
 <a class="navbar-brand"  href="?page=home">
-  <img src="dist/img/logo_text_black.png" width="300"  class="logo"loading="lazy">
+  <img src="dist/img/logo_text_black.png" width="200px"  class="logo"loading="lazy">
 </a>
 </nav>
-
-
-<nav class="navbar navbar-expand-lg navbar-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -90,3 +93,4 @@ nav{
 
   </div>
 </nav>
+</div>

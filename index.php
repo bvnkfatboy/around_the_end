@@ -134,6 +134,26 @@
             echo $output;
             break;
 
+        // admin product
+        case ('product_edit'):
+            include_once 'admin/product/product_edit.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('product_insert'):
+            include_once 'admin/product/product_insert.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('product_remove'):
+            include_once 'admin/product/product_remove.php';
+            $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
         default:
             include_once 'error404.php';
             $title = "ERROR PAGE - A.T.E";
