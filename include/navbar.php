@@ -38,22 +38,19 @@ nav .navbar-nav li a:hover{
 
     <ul class="navbar-nav mr-auto">
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">OUTERWEAR</a>
+            <a class="nav-link" href="?page=outerwear">OUTERWEAR</a>
         </li>
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">SHIRTS</a>
+            <a class="nav-link" href="?page=shirsts">SHIRTS</a>
         </li>
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">BOTTOMS</a>
+            <a class="nav-link" href="?page=bottoms">BOTTOMS</a>
         </li>
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">HEADWEAR</a>
+            <a class="nav-link" href="?page=headwear">HEADWEAR</a>
         </li>
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">ACCESSORIES</a>
-        </li>
-        <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">MASKS</a>
+            <a class="nav-link" href="?page=accessories">ACCESSORIES</a>
         </li>
     </ul>
     <?php
@@ -69,7 +66,7 @@ nav .navbar-nav li a:hover{
     ?>
     <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">SHOP ALL COLLECTIONS</a>
+            <a class="nav-link" href="?page=allproduct">SHOP ALL COLLECTIONS</a>
         </li>
         <li class="nav-item mx-auto">
             <a class="nav-link" href="<?php echo($acc_link); ?>">ACCOUNT</a>

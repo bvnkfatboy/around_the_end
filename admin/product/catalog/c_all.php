@@ -6,7 +6,7 @@
   padding: 0 15px;
 
   padding-bottom:15px;
-  /* border: 1px solid #444444; */
+
 }
 
 .row_pro {margin: 0; margin-top:15px;}
@@ -87,20 +87,18 @@
 
     <?php
         include_once('config.inc.php');
-        include_once('include/navbar.php');
         $result = mysqli_query($conn,"SELECT * FROM product ORDER BY pro_name");
 
         while($row = mysqli_fetch_array($result)){
             echo '
-            <a href="#" style="color:black">
-              <div class="column_pro">
+            <div class="column_pro">
                 <div class="product_cards">
                     <img  width="336px" src="'.$row['pro_image'].'">
                     <div class="product_name"><b class="product_text">'.$row['pro_name'].'</b> <p>'.$row['pro_price'].' บาท</p></div>
-
+                    
                 </div>
-              </div> 
-            </a>
+                <a href="?page=product_edit&&pro_id='.$row['pro_id'].'" class="btn btn-primary btn-block btn-editpro">แก้ไขสินค้า</a>
+            </div> 
             
             ';
 
@@ -116,4 +114,3 @@
   </div> -->
 
 </div>
-<?php include_once('include/footer.php');?>

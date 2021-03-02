@@ -30,7 +30,7 @@ if($check_admin == 'admin' ){
 </style>
 <a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
 <hr>
-
+<?php include_once('include/footer.php');?>
 <?php }else {
     header('Location: ?page=home');
 }?>

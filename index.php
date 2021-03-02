@@ -32,15 +32,45 @@
     $current_page = isset($_GET['page']) ? $_GET['page'] : 'home' ;
 
     switch ($current_page) {
-        case ('home'):
-            include_once 'homepage.php';
-            $title = "Official Around The End - Apparel,Accessories & Load Nermal - A.T.E";
+        case ('outerwear'):
+            include_once 'outerwear.php';
+            $title = "OUTERWEAR - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('shirsts'):
+            include_once 'shirsts.php';
+            $title = "SHIRSTS - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('bottoms'):
+            include_once 'bottoms.php';
+            $title = "BOTTOMS - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('headwear'):
+            include_once 'headwear.php';
+            $title = "HEADWEAR - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('accessories'):
+            include_once 'accessories.php';
+            $title = "ACCESSORIES - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
         case ('allproduct'):
+            include_once 'allproduct.php';
+            $title = "SHOP ALL COLLECTIONS - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('home'):
             include_once 'homepage.php';
-            $title = "All Products- A.T.E";
+            $title = "Official Around The End - Apparel,Accessories & Load Nermal - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;

@@ -95,7 +95,7 @@ if($check_admin == 'admin' ){
 
   </tbody>
 </table>
-
+<?php include_once('include/footer.php');?>
 <?php }else {
     header('Location: ?page=home');
 }?>

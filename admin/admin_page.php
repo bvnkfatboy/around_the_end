@@ -146,7 +146,7 @@ a:hover{
 
 
 
-
+<?php include_once('include/footer.php');?>
 
 <?php }else {
     header('Location: ?page=home');

@@ -6,7 +6,7 @@
   padding: 0 15px;
 
   padding-bottom:15px;
-  /* border: 1px solid #444444; */
+
 }
 
 .row_pro {margin: 0; margin-top:15px;}
@@ -60,7 +60,6 @@
     height: 25px;
     width: 100%;
 }
-
 .btn-editpro {        
         max-width: 150px;
         border-radius: 2px;
@@ -79,16 +78,14 @@
     color: black;
 
 }
-
 </style>
-
 
 <div class="row_pro">
 
     <?php
         include_once('config.inc.php');
         include_once('include/navbar.php');
-        $result = mysqli_query($conn,"SELECT * FROM product ORDER BY pro_name");
+        $result = mysqli_query($conn,"SELECT * FROM product WHERE pro_type='OUTERWEAR' ");
 
         while($row = mysqli_fetch_array($result)){
             echo '
@@ -101,7 +98,6 @@
                 </div>
               </div> 
             </a>
-            
             ';
 
         }
