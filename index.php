@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="dist/css/reset.css">
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="dist/css/font.css">
     <link rel="stylesheet" href="dist/css/fontawesome.css">
     <link rel="stylesheet" href="dist/css/sweetalert2.min.css">
@@ -33,37 +34,37 @@
 
     switch ($current_page) {
         case ('outerwear'):
-            include_once 'outerwear.php';
+            include_once 'product/outerwear.php';
             $title = "OUTERWEAR - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
         case ('shirsts'):
-            include_once 'shirsts.php';
+            include_once 'product/shirsts.php';
             $title = "SHIRSTS - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
         case ('bottoms'):
-            include_once 'bottoms.php';
+            include_once 'product/bottoms.php';
             $title = "BOTTOMS - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
         case ('headwear'):
-            include_once 'headwear.php';
+            include_once 'product/headwear.php';
             $title = "HEADWEAR - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
         case ('accessories'):
-            include_once 'accessories.php';
+            include_once 'product/accessories.php';
             $title = "ACCESSORIES - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
         case ('allproduct'):
-            include_once 'allproduct.php';
+            include_once 'product/allproduct.php';
             $title = "SHOP ALL COLLECTIONS - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
@@ -180,6 +181,15 @@
         case ('product_remove'):
             include_once 'admin/product/product_remove.php';
             $title = "หลังร้าน - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
+
+        // order systems
+        case ('cart'):
+            include_once 'product/order/cart.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;

@@ -106,6 +106,7 @@ if (isset($_POST['auth-update'])) {
 
                 if (result.isConfirmed) {
                     location.href='?page=admin_member';
+                    <?php mysql_close(); ?>
                 }
             })
         </script>

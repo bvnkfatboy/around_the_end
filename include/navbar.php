@@ -72,7 +72,7 @@ nav .navbar-nav li a:hover{
             <a class="nav-link" href="<?php echo($acc_link); ?>">ACCOUNT</a>
         </li>
         <li class="nav-item mx-auto">
-            <a class="nav-link" href="#">CART (0)</a>
+            <a class="nav-link" href="?page=cart">CART (0)</a>
         </li>
         <?php
         // $check_admin = ($_SESSION['auth-status']);

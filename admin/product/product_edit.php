@@ -57,7 +57,6 @@ $check_admin = isset($_SESSION['auth-status']) ? $_SESSION['auth-status'] : '';
                     showCancelButton: false,
                     confirmButtonText: `ตกลง`,
                 }).then((result) => {
-
                     if (result.isConfirmed) {
                         location.href='?page=admin_product';
                     }

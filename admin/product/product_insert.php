@@ -40,7 +40,7 @@ if($check_admin == 'admin' ){
                 }).then((result) => {
 
                     if (result.isConfirmed) {
-                        location.href='?page=product_insert';
+                        location.href='?page=admin_product';
                     }
                 })
             </script>
