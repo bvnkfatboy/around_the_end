@@ -82,10 +82,27 @@ if (isset($_POST['auth-update'])) {
 
                 if (result.isConfirmed) {
                     location.href='?page=profile';
+                    <?php exit();?>
                 }
             })
         </script>
-    <?php }
+    <?php } else { ?>
+        <script>
+            Swal.fire({
+                title: 'ไม่สำเร็จ',
+                text:'ระบบได้อัพเดตข้อมูลของคุณเรียบร้อยแล้ว',
+                icon: 'error',
+                showCancelButton: false,
+                confirmButtonText: `ตกลง`,
+            }).then((result) => {
+
+                if (result.isConfirmed) {
+                    location.href='?page=profile';
+                    <?php exit();?>
+                }
+            })
+        </script>
+   <?php }
 }
 
 ?>

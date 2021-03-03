@@ -62,6 +62,7 @@ if (isset($_POST['auth-log'])) {
         $_SESSION['auth-status'] = $row['acc_status'];
         
         header('Location: ?page=home');
+        exit();
     } else { ?>
         <script>
             Swal.fire({
@@ -74,6 +75,7 @@ if (isset($_POST['auth-log'])) {
 
                 if (result.isConfirmed) {
                     header('location: ?page:login');
+                    <?php exit();?>
                 }
             })
         </script>
