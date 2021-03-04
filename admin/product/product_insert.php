@@ -41,7 +41,7 @@ if($check_admin == 'admin' ){
 
                     if (result.isConfirmed) {
                         location.href='?page=admin_product';
-                        <?php exit(); ?>
+
                     }
                 })
             </script>
@@ -58,8 +58,8 @@ if($check_admin == 'admin' ){
             }).then((result) => {
 
                 if (result.isConfirmed) {
-                    header('location: ?page=product_insert');
-                    <?php exit();?>
+                    header('location: ?page=admin_product');
+
                 }
             })
         </script>

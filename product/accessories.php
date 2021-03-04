@@ -92,7 +92,7 @@
 
         while($row = mysqli_fetch_array($result)){
             echo '
-            <a href="#" style="color:black">
+            <a href="?page=product&&pro_id= '.$row['pro_id'].' " style="color:black">
               <div class="column_pro">
                 <div class="product_cards">
                     <img  width="336px" src="'.$row['pro_image'].'">

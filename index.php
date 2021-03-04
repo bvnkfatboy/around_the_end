@@ -187,8 +187,44 @@
 
 
         // order systems
+        case ('product'):
+            include_once 'product/product.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('order_delete'):
+            include_once 'product/order/delete.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('order'):
+            include_once 'product/order/order.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('cart_clear'):
+            include_once 'product/order/clear.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
         case ('cart'):
             include_once 'product/order/cart.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('checkout'):
+            include_once 'product/order/checkout.php';
+            $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('save_checkout'):
+            include_once 'product/order/save_checkout.php';
             $title = "ตะกร้าสินค้า - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
@@ -201,6 +237,21 @@
             echo $output;
     }
     ?>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </body>
 
 </html>
