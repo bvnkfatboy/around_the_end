@@ -1,31 +1,7 @@
--- phpMyAdmin SQL Dump
--- version 5.0.4
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Generation Time: Jan 29, 2021 at 10:14 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `db_shop`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `account`
---
 
 CREATE TABLE `account` (
   `acc_id` int(5) NOT NULL,
@@ -37,34 +13,71 @@ CREATE TABLE `account` (
   `acc_status` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `account`
+
+CREATE TABLE `orders` (
+  `order_id` int(5) NOT NULL,
+  `order_date` datetime NOT NULL,
+  `order_name` text NOT NULL,
+  `order_address` text NOT NULL,
+  `order_email` text NOT NULL,
+  `order_tal` text NOT NULL,
+  `order_key` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 --
 
-INSERT INTO `account` (`acc_id`, `acc_name`, `acc_password`, `acc_email`, `acc_address`, `acc_phone`, `acc_status`) VALUES
-(1, 'ADMIN', '1234', 'admin@admin.com', 'No detail', 'No detail', 'admin'),
-(2, 'BVNK', '1234', 'bvnk@gmail.com', '', '', 'member');
+CREATE TABLE `orders_detail` (
+  `detail_id` int(5) NOT NULL,
+  `order_id` int(5) NOT NULL,
+  `pro_id` int(5) NOT NULL,
+  `qty` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
 
 --
--- Indexes for dumped tables
+-- Table structure for table `product`
 --
 
---
--- Indexes for table `account`
+CREATE TABLE `product` (
+  `pro_id` int(5) NOT NULL,
+  `pro_name` text NOT NULL,
+  `pro_price` text NOT NULL,
+  `pro_size` text NOT NULL,
+  `pro_detail` text NOT NULL,
+  `pro_image` text NOT NULL,
+  `pro_type` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`acc_id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`order_id`);
+
+--
+-- Indexes for table `orders_detail`
+--
+ALTER TABLE `orders_detail`
+  ADD PRIMARY KEY (`detail_id`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
+  ADD PRIMARY KEY (`pro_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `account`
---
-ALTER TABLE `account`
-  MODIFY `acc_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
