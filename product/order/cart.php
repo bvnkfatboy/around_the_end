@@ -92,7 +92,7 @@ if(!isset($_SESSION["intLine"]))
 		$objQuery = mysqli_query($conn,$strSQL);
 		$objResult = mysqli_fetch_array($objQuery);
 		$pricetrue = $objResult["pro_price"];
-		$Total = $_SESSION["strQty"][$i] * $pricetrue;
+		$Total = ($_SESSION["strQty"][$i] * $pricetrue);
 		
 
 		

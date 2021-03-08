@@ -58,7 +58,31 @@ extract($row);
             <a href="#" onclick="conf()" class="btn btn-primary btn-block">LOGOUT</a>
             </div>
             <div class="col-md-6">
-            
+            <h4 class="title-menu">รายการสั่งซื้อสินค้า             <a href="?page=payment" class="btn btn-primary btn-block float-right">ชำระเงิน</a></h4>
+            <br>
+
+
+<?php
+                    $order_sql = "SELECT * FROM orders WHERE order_email='".$acc_email."' ";
+                    $result_order = mysqli_query($conn, $order_sql) or die ("Error in query: $order_sql " . mysqli_error());
+                    // $order = mysqli_fetch_array($result_order);
+                    // $ordercheckemail = isset($order['order_email']);
+                    
+
+                    while($orders = mysqli_fetch_array($result_order)){
+                    echo '    
+                    <a href="?page=orders&&OrderID='.$orders["order_id"].'" class="text-dark" style="text-decoration:none">
+                        <div class="card mx-auto" style="">
+                        <div class="card-body">
+                            <h5 class="card-title">ออเดอร์ : '.$orders["order_key"].'</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">วันที่: '.$orders["order_date"].'</h6>
+                            <p class="card-text"></p>
+                        </div>
+                        </div>
+                    </a> ';
+                    }
+?>
+
             </div>
         </div>
     </div>

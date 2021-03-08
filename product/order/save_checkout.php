@@ -15,8 +15,8 @@ $keyrm = generateRandomString();
 date_default_timezone_set('Asia/bangkok');
 
 
-$sql = "INSERT INTO orders (order_date,order_name,order_address,order_email,order_tal,order_key)
-VALUES ('$datetime','$order_name','$order_address','$order_email','$order_tal','$keyrm') ";
+$sql = "INSERT INTO orders (order_date,order_name,order_address,order_email,order_tal,order_key,status)
+VALUES ('$datetime','$order_name','$order_address','$order_email','$order_tal','$keyrm','รอการยืนยัน') ";
 mysqli_query($conn,$sql);
 $strOrderID = mysqli_insert_id($conn);
 for($i=0;$i<=(int)$_SESSION["intLine"];$i++)

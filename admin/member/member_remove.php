@@ -15,7 +15,7 @@ if($check_admin == 'admin' ){
 
         if($sql){
             header('Location: ?page=admin_member');
-            exit();
+
         }
 
     }

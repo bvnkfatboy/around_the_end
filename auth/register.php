@@ -65,7 +65,7 @@ if (isset($_POST['auth-reg'])) {
             VALUES ('$acc_name','$acc_email','$acc_pass','no detail','no detail','member')";
         mysqli_query($conn, $query);
         header('location: ?page=login');
-        exit();
+
     } else { ?>
         <script>
             Swal.fire({
@@ -78,7 +78,7 @@ if (isset($_POST['auth-reg'])) {
 
                 if (result.isConfirmed) {
                     header('location: ?page=register');
-                    <?php exit();?>
+           
                 }
             })
         </script>

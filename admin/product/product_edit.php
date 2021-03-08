@@ -59,14 +59,14 @@ $check_admin = isset($_SESSION['auth-status']) ? $_SESSION['auth-status'] : '';
                 }).then((result) => {
                     if (result.isConfirmed) {
                         location.href='?page=admin_product';
-                        <?php exit(); ?>
+
                     }
                 })
             </script>
             
             <?php } else { 
                 header('Location:?page=admin_product');
-                exit();
+
             }
     }
 
@@ -80,7 +80,7 @@ $check_admin = isset($_SESSION['auth-status']) ? $_SESSION['auth-status'] : '';
     
             if($sql){
                 header('Location: ?page=admin_product');
-                exit();
+
             }
     
         }

@@ -82,7 +82,7 @@ if (isset($_POST['auth-update'])) {
 
                 if (result.isConfirmed) {
                     location.href='?page=profile';
-                    <?php exit();?>
+
                 }
             })
         </script>
@@ -98,7 +98,7 @@ if (isset($_POST['auth-update'])) {
 
                 if (result.isConfirmed) {
                     location.href='?page=profile';
-                    <?php exit();?>
+
                 }
             })
         </script>

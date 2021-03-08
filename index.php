@@ -199,6 +199,12 @@
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
+        case ('orders'):
+            include_once 'product/orders.php';
+            $title = "ออเดอร์ - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
         case ('order'):
             include_once 'product/order/order.php';
             $title = "ตะกร้าสินค้า - A.T.E";
@@ -226,6 +232,13 @@
         case ('save_checkout'):
             include_once 'product/order/save_checkout.php';
             $title = "ตะกร้าสินค้า - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
+        case ('payment'):
+            include_once 'payment/payment.php';
+            $title = "ชำระเงิน - A.T.E";
             $output = str_replace('%TITLE%', $title, $output);
             echo $output;
             break;
