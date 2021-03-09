@@ -115,6 +115,15 @@ a:hover{
     </div>
 
     <div class="column">
+        <a href="?page=admin_data">    
+            <div class="product_cards">
+                <i class="fas fa-shopping-cart mb-1 fa-5x mx-auto w-100 d-block"></i>
+                <div class="product_name "><p class="product_text">ข้อมูลออเดอร์</p></div>
+            </div>
+        </a>
+    </div>
+
+    <div class="column">
         <a href="?page=admin_approve">    
             <div class="product_cards">
                 <i class="fas  fa-wallet mb-1 fa-5x mx-auto w-100 d-block"></i>
@@ -132,14 +141,7 @@ a:hover{
         </a>
     </div>
 
-    <div class="column">
-        <a href="?page=admin_data">    
-            <div class="product_cards">
-                <i class="fas  fa-chart-pie mb-1 fa-5x mx-auto w-100 d-block"></i>
-                <div class="product_name "><p class="product_text">ข้อมูลโดยรวม</p></div>
-            </div>
-        </a>
-    </div>
+
 
 
 </div>

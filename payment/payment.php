@@ -1,3 +1,7 @@
+
+
+
+
 <style>
     .login-form {
         width: 450px;
@@ -50,9 +54,6 @@
     }
 </style>
 
-<?php
-include('config.inc.php');
-?>
 
 <?php include_once('include/navbar.php') ?>
 

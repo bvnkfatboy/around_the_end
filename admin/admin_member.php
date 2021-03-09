@@ -48,11 +48,14 @@ if($check_admin == 'admin' ){
 
 </style>
 <a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
-<hr>
+
 
 
 <table class="table table-hover mx-auto"  style="max-width:1024px;">
+<h1 class="text-center">ข้อมูลสมาชิก</h1>
+<br>
   <thead>
+  
     <tr>
       <th scope="col">อีเมล</th>
       <th scope="col">ชื่อ</th>
