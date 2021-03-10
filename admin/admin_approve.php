@@ -29,7 +29,28 @@ if($check_admin == 'admin' ){
     }
 </style>
 <a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
-<hr>
+
+
+<?php
+    include_once('config.inc.php');
+    $result = mysqli_query($conn,"SELECT * FROM orders  WHERE status='พนักงานกำลังตรวจสอบ'");
+
+    while($row = mysqli_fetch_array($result)){
+        echo '    
+        <a href="?page=payments&&OrderID='.$row["order_id"].'" class="text-dark" style="text-decoration:none">
+            <div class="card mx-auto" style="">
+            <div class="card-body">
+                <h5 class="card-title">ออเดอร์ : '.$row["order_key"].' <p> โดย '.$row["order_name"].'</p> </h5>
+                <h6 class="card-subtitle mb-2 text-muted">วันที่: '.$row["order_date"].'</h6>
+                <p class="card-text">สถานะ: '.$row["status"].'</p>
+            </div>
+            </div>
+        </a> ';
+
+    }
+
+    ?>
+
 <?php include_once('include/footer.php');?>
 <?php }else {
     header('Location: ?page=home');

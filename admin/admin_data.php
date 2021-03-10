@@ -46,31 +46,67 @@ if($check_admin == 'admin' ){
 
 
 
+
 </style>
 <a href="?page=admin" class="btn btn-primary btn-block btn-back">กลับหน้าหลังบ้าน</a><br>
 
 
 <h1 class="text-center">ข้อมูลออเดอร์</h1>
+
 <br>
-<?php
-    include_once('config.inc.php');
-    $result = mysqli_query($conn,"SELECT * FROM orders ORDER BY order_id asc");
-
-    while($row = mysqli_fetch_array($result)){
-        echo '    
-        <a href="?page=orders&&OrderID='.$row["order_id"].'" class="text-dark" style="text-decoration:none">
-            <div class="card mx-auto" style="">
-            <div class="card-body">
-                <h5 class="card-title">ออเดอร์ : '.$row["order_key"].' <p> โดย '.$row["order_name"].'</p> </h5>
-                <h6 class="card-subtitle mb-2 text-muted">วันที่: '.$row["order_date"].'</h6>
-                <p class="card-text"></p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+            <h4>หมวดหมู่</h4>
+            <div class="list-group list-group-flush">
+            <a href="?page=admin_data&&list_order=ทั้งหมด" class="list-group-item list-group-item-action">- ทั้งหมด</a>
+            <a href="?page=admin_data&&list_order=รอชำระเงิน" class="list-group-item list-group-item-action">- รอชำระเงิน</a>
+            <a href="?page=admin_data&&list_order=รอตรวจสอบ" class="list-group-item list-group-item-action">- รอตรวจสอบ</a>
+            <a href="?page=admin_data&&list_order=สำเร็จแล้ว" class="list-group-item list-group-item-action">- สำเร็จแล้ว</a>
             </div>
-            </div>
-        </a> ';
+		</div>
+		<div class="col-md-10">
 
-    }
+            <?php
+            $current_page = isset($_GET['list_order']) ? $_GET['list_order'] : 'ทั้งหมด' ;
+            switch ($current_page) {
 
-    ?>
+                case ('ทั้งหมด'):
+                    include_once 'admin/orders/order_all.php';
+                    $title = "หลังร้าน - A.T.E";
+                    $output = str_replace('%TITLE%', $title, $output);
+                    echo $output;
+                    break;
+                case ('รอชำระเงิน'):
+                    include_once 'admin/orders/order_wpay.php';
+                    $title = "หลังร้าน - A.T.E";
+                    $output = str_replace('%TITLE%', $title, $output);
+                    echo $output;
+                    break;
+                case ('รอตรวจสอบ'):
+                    include_once 'admin/orders/order_wadmin.php';
+                    $title = "หลังร้าน - A.T.E";
+                    $output = str_replace('%TITLE%', $title, $output);
+                    echo $output;
+                    break;
+                case ('สำเร็จแล้ว'):
+                    include_once 'admin/orders/order_succress.php';
+                    $title = "หลังร้าน - A.T.E";
+                    $output = str_replace('%TITLE%', $title, $output);
+                    echo $output;
+                    break;
+        
+                default:
+                    include_once 'error404.php';
+                    $title = "ERROR PAGE - A.T.E";
+                    $output = str_replace('%TITLE%', $title, $output);
+                    echo $output;
+            };
+
+            ?>
+		</div>
+	</div>
+</div>
 
 <?php include_once('include/footer.php');?>
 <?php }else {

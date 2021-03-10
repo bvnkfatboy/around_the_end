@@ -243,6 +243,33 @@
             echo $output;
             break;
 
+        case ('payments'):
+            include_once 'admin/payments/payments.php';
+            $title = "พนักงานตรวจสอบ - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
+        case ('payments_app'):
+            include_once 'admin/payments/payments_app.php';
+            $title = "พนักงานตรวจสอบ - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+        case ('payments_del'):
+            include_once 'admin/payments/payments_del.php';
+            $title = "พนักงานตรวจสอบ - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
+        case ('track_set'):
+            include_once 'admin/tracking/tracking_set.php';
+            $title = "แจ้งเลขพัสดุ - A.T.E";
+            $output = str_replace('%TITLE%', $title, $output);
+            echo $output;
+            break;
+
         default:
             include_once 'error404.php';
             $title = "ERROR PAGE - A.T.E";

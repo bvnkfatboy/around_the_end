@@ -76,7 +76,7 @@ extract($row);
                         <div class="card-body">
                             <h5 class="card-title">ออเดอร์ : '.$orders["order_key"].'</h5>
                             <h6 class="card-subtitle mb-2 text-muted">วันที่: '.$orders["order_date"].'</h6>
-                            <p class="card-text"></p>
+                            <p class="card-text">สถานะ: '.$orders["status"].'</p>
                         </div>
                         </div>
                     </a> ';
