@@ -181,7 +181,7 @@ $row = mysqli_fetch_array($query);
                 </div>
                 <div class="form-group">
                     <label> อีเมล:</label>
-                    <input type="email"  name="order_email" class="form-control" required="required" value="<?php echo $row['acc_email'];?>" >
+                    <input type="email"  name="order_email" class="form-control" required="required" readonly value="<?php echo $row['acc_email'];?>" >
                 </div>
                 <div class="form-group">
                     <label> เบอร์โทร:</label>
