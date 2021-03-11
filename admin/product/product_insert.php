@@ -197,7 +197,7 @@ if($check_admin == 'admin' ){
             <div class="warpper">
                     <div class="zoneupload">
                             <div class="image">
-                                <img src="dist/img/product/1.jpg" id="imgs">
+                                <img src="dist/img/add_image.svg" id="imgs">
                             </div>
 
                            
