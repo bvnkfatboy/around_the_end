@@ -59,11 +59,14 @@ if($check_admin == 'admin' ){
 		<div class="col-md-2">
             <h4>หมวดหมู่</h4>
             <div class="list-group list-group-flush">
+            <h5>ข้อมูลออเดอร์</h5>
             <a href="?page=admin_data&&list_order=ทั้งหมด" class="list-group-item list-group-item-action">- ทั้งหมด</a>
             <a href="?page=admin_data&&list_order=รอชำระเงิน" class="list-group-item list-group-item-action">- รอชำระเงิน</a>
             <a href="?page=admin_data&&list_order=รอตรวจสอบ" class="list-group-item list-group-item-action">- รอตรวจสอบ</a>
             <a href="?page=admin_data&&list_order=สำเร็จแล้ว" class="list-group-item list-group-item-action">- สำเร็จแล้ว</a>
             </div>
+
+
 		</div>
 		<div class="col-md-10">
 
@@ -97,13 +100,10 @@ if($check_admin == 'admin' ){
                     break;
         
                 default:
-                    include_once 'error404.php';
-                    $title = "ERROR PAGE - A.T.E";
-                    $output = str_replace('%TITLE%', $title, $output);
-                    echo $output;
             };
 
             ?>
+
 		</div>
 	</div>
 </div>

@@ -1,6 +1,6 @@
 <?php
     include_once('config.inc.php');
-    $result = mysqli_query($conn,"SELECT * FROM orders  WHERE status='สำเร็จแล้ว'");
+    $result = mysqli_query($conn,"SELECT * FROM orders  WHERE status='สำเร็จ'");
 
     while($row = mysqli_fetch_array($result)){
         echo '    
